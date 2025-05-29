@@ -6,7 +6,7 @@ use Inertia\Inertia;
 Route::get('/', function () {
     return [
         'ip' => request()->ip(),
-        'ips' => request()->ip(),
+        'ips' => request()->ips(),
     ];
 })->name('home');
 
