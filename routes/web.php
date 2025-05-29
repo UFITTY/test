@@ -4,7 +4,10 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
 Route::get('/', function () {
-    return Inertia::render('Welcome');
+    return [
+        'ip' => request()->ip(),
+        'ips' => request()->ip(),
+    ];
 })->name('home');
 
 Route::get('dashboard', function () {
